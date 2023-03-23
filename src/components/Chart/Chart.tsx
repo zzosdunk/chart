@@ -40,8 +40,8 @@ const Chart = ({ cartToShow }: ChartProps) => {
         color: "#d5f134",
         labels: {
           font: {
-            size: 15, // set the font size
-            color: "white", // set the font color
+            size: 15,
+            color: "white",
           },
         },
       },
