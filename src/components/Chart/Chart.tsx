@@ -29,7 +29,7 @@ const Chart = ({ cartToShow }: ChartProps) => {
   const labels = cartToShow?.products.map((product) => product.title);
 
   const chartName = cartToShow
-    ? `Products of cart with id ${cartToShow?.id} and with total amount of ${cartToShow?.total}`
+    ? `Cart chart data with total amount of ${cartToShow?.total}`
     : "Choose some cart to see it's data";
 
   const options = {
@@ -84,7 +84,10 @@ const Chart = ({ cartToShow }: ChartProps) => {
       },
       {
         label: "Disounted price",
-        data: cartToShow?.products.map((product) => product.discountedPrice),
+        data: cartToShow?.products.map(
+          (product) =>
+            product.price - product.price * (product.discountPercentage / 100)
+        ),
         borderColor: "#d5f134",
         backgroundColor: "#66f134",
         color: "#ffffff",

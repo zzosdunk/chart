@@ -1,4 +1,5 @@
 import "./Cart.css";
+import trashIcon from "../../assets/trashIcon.png";
 
 import { CartData } from "../Types/types";
 
@@ -32,7 +33,7 @@ const Cart = ({
         Show Cart Data
       </button>
       <button className="delete-btn" onClick={removeCartHandler}>
-        X
+        <img src={trashIcon} alt="removeCart" />
       </button>
     </div>
   );

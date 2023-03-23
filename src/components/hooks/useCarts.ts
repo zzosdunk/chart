@@ -5,7 +5,7 @@ import { CartData } from "../Types/types";
 const useFetchCartsData = (apiUrl: string) => {
   const [carts, setCarts] = useState<CartData[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
 
   const fetchData = useCallback(async () => {
     setIsLoading(true);
@@ -14,14 +14,14 @@ const useFetchCartsData = (apiUrl: string) => {
       const response = await fetch(apiUrl);
 
       if (!response.ok) {
+        setError("Something went wrong, check is the API correct");
         throw new Error("Something went wrong on fetching!");
       }
 
       const data = await response.json();
-      console.log(data.carts);
       setCarts(data.carts);
     } catch (error) {
-      //setError(error);
+      setError("Something went wrong");
     } finally {
       setIsLoading(false);
     }

@@ -7,30 +7,10 @@
   align-items: center;
 }
 
-h1 {
-  font-size: 28px;
-  margin: 20px 0 0 0;
-}
-
 .cart-item {
   flex: 0 0 20%;
   box-sizing: border-box;
   padding: 10px;
-}
-
-button {
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-button:hover {
-  background-color: var(--color-border);
 }
 
 .header-content {
@@ -39,23 +19,57 @@ button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  margin-top: 2rem;
 }
 
 .chart {
-  margin: 3rem;
+  margin: 0 3rem;
+}
+
+.addCartButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color-cart);
+  color: var(--color-special);
+  padding: 10px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.addCartButton img {
+  width: 25px;
+  height: 25px;
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 21px;
-    margin: 0;
-  }
-
   .container {
     margin: 0;
   }
+  .cart-item {
+    flex: 0 0 50%;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+}
 
-  button {
-    padding: 5px 10px;
+@media (max-width: 420px) {
+  h1 {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  .cart-item {
+    flex: 0 0 100%;
+    padding: 5px;
   }
 }

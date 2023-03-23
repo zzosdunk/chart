@@ -5,6 +5,7 @@ export interface ItemData {
   quantity: number;
   total: number;
   discountedPrice: number;
+  discountPercentage: number;
 }
 
 export interface CartData {

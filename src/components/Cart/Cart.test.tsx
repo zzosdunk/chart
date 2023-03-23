@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import Cart from "./Cart";
 
-import { CartData, ItemData } from "../Types/types";
+import { CartData } from "../Types/types";
 
 const cartData: CartData = {
   id: 1,
@@ -14,6 +14,7 @@ const cartData: CartData = {
       discountedPrice: 40,
       quantity: 1,
       total: 50,
+      discountPercentage: 0.5,
     },
     {
       id: 2,
@@ -22,6 +23,7 @@ const cartData: CartData = {
       discountedPrice: 20,
       quantity: 2,
       total: 60,
+      discountPercentage: 0.3,
     },
   ],
   totalProducts: 2,
