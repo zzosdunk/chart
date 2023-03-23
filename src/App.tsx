@@ -1,4 +1,5 @@
-import CartsPage from "./components/Cart/CartsPage";
+import CartsPage from "./components/CartsPage/CartsPage";
+import "./App.css";
 
 export default function App() {
   return <CartsPage />;

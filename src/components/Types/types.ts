@@ -4,6 +4,7 @@ export interface ItemData {
   price: number;
   quantity: number;
   total: number;
+  discountedPrice: number;
 }
 
 export interface CartData {
