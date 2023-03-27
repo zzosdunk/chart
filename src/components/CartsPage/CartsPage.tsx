@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./CartsPage.css";
 import Cart from "../Cart/Cart";
 import { CartData } from "../Types/types";
-import useFetchCartsData from "../hooks/useCarts";
+import useCarts from "../hooks/useCarts";
 
 import Chart from "../Chart/Chart";
 import CreateCart from "../CreateCart/CreateCart";
@@ -15,7 +15,7 @@ const API_URL = "https://dummyjson.com/carts";
 const CartsPage: React.FC = () => {
   const [selectedCart, setSelectedCart] = useState<CartData>();
 
-  const { carts, isLoading, error } = useFetchCartsData(API_URL);
+  const { carts, isLoading, error } = useCarts(API_URL);
   const [sortedCarts, setSortedCarts] = useState<CartData[]>(carts);
   const [showAddCart, setShowAddCart] = useState(false);
 

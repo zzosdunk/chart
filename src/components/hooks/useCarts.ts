@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 
 import { CartData } from "../Types/types";
 
-const useFetchCartsData = (apiUrl: string) => {
+const useCarts = (apiUrl: string) => {
   const [carts, setCarts] = useState<CartData[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -34,4 +34,4 @@ const useFetchCartsData = (apiUrl: string) => {
   return { carts, isLoading, error };
 };
 
-export default useFetchCartsData;
+export default useCarts;
